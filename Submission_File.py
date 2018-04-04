@@ -1,6 +1,14 @@
-# This file contains all the main external libs we'll use
+######################################################################################################
+# This file takes a pre-trained model and uses it to create a file in the required submission format.
+# There were some mismatches between the names of the categories (Superhero names) and the method in 
+# which the images were arranged in the train folder. This file ensures that the output is in a format
+# acceptable to the scoring engine
+######################################################################################################
+
+# This loads all the main external libs we'll use
 from fastai.imports import *
 
+# Loads the required transformation and learners
 from fastai.transforms import *
 from fastai.conv_learner import *
 from fastai.model import *
