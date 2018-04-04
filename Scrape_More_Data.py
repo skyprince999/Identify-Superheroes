@@ -1,20 +1,22 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Mar 18 08:48:27 2018
 
-@author: aakas
+@author: Aakash Gupta
 """
+#####################################################################################################################
+# Use this file to scrape more training samples from the World Wide Web
+# Used the Bing Search API for finding more training examples 
+# URL: https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/
+#
+#####################################################################################################################
 
-#import matplotlib.pyplot as plt
-#from PIL import Image
-#from io import BytesIO
+
 import urllib.request
 import requests
 import pickle
 import os
 
-#subscription_key = "96d05359d76f4e758906539daeab939e"
-subscription_key = "af868f73d1f44344b36d566e82bc6191"
+subscription_key = "#################################"
 assert subscription_key
 
 headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
@@ -36,11 +38,6 @@ commonSearchTerms = ['t-shirts', 'neck-tie', 'underwear', 'boxers', 'pyjamas', '
 
 
 mainTerms = { 'spidey': 'Spiderman', 'amazing spiderman':'Spiderman' , 'superman':'Superman'          }
-
-# , 
-#           , 
-#           
-
 PATH = "C:\\CAX_Superhero_Identify\\train_xtra\\"
 
 for term in mainTerms:
